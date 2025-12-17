@@ -1,13 +1,18 @@
 # The Initial D Cars App
+![an app screenshot](./doc/Screenshot.JPG)
 
 ## Tech Stack
 - ASP.Net core 6 Web Api.
+- Entity Framework Core.
 - Angular 15.
-- Sass
+- Sass.
 - Bootstrap 5.
 - Microsoft SQL Server.
 
-![an app screenshot](./doc/Screenshot.JPG)
+## Features
+- user authentication.
+- visitor mode for viewing cars
+- admin mode for adding and deleting cars. It also features an image upload button.
 
 ## Configuration
 ### Asp.Net Core Web API

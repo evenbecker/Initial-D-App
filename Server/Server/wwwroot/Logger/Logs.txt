@@ -20,3 +20,5 @@ Time: 16/12/2025 11:31:51,  Description: Failed to get all cars, unknown error:,
 Time: 16/12/2025 11:56:19,  Description: Car with parameters: Id: 0, Name: honda, Category: , ImageSrc: ,  not found in the database,   Exception Message: Exception of type 'Server.Helpers.ExceptionHandler+NotFoundInDbException' was thrown..
 
 
+Time: 17/12/2025 16:22:08,  Description: Unknown Error,   Exception Message: IDX10653: The encryption algorithm 'HS256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '96'. (Parameter 'key').
+
