@@ -1,5 +1,14 @@
 # The Initial D Cars App
 
+## Tech Stack
+- ASP.Net core 6 Web Api.
+- Angular 15.
+- Sass
+- Bootstrap 5.
+- Microsoft SQL Server.
+
+![an app screenshot](./doc/Screenshot.JPG)
+
 ## Configuration
 ### Asp.Net Core Web API
 - Go To `ConfiguredValues.cs`.
@@ -89,8 +98,4 @@ VALUES ('Even Becker', 'whatelse', '2025-12-03 17:30:00');
 - Open the Client using CLI and enter `ng serve`.
 - Enter your Angular port url in the browser, it is usually `http://localhost:4200/`.
 
-## Technologies I've Used for the Project
-- ASP.Net core 6 Web Api.
-- Angular 15.
-- Bootstrap 5.
-- Microsoft SQL Server.
+
