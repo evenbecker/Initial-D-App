@@ -1,0 +1,47 @@
+<div id="id1" class="container-flex mt-5">
+  <div id="id2" class="container-xxl mt-5">
+    <form #form="ngForm">
+      <div class="m-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          [(ngModel)]="car.name"
+          name="name"
+          type="text"
+          id="name"
+          class="form-control"
+          aria-describedby="NameHelpBlock"
+          (blur)="updateCar()"
+        />
+        <div id="NameHelpBlock" class="form-text">50 Characters max</div>
+      </div>
+      <div class="m-3">
+        <label for="category" class="form-label">Brand</label>
+        <select
+          id="category"
+          name="category"
+          class="form-select form-select-sm"
+          aria-label=".form-select-sm example"
+          [(ngModel)]="car.category"
+          (blur)="updateCar()"
+        >
+          <option value="Nissan">Nissan</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Mazda">Mazda</option>
+          <option value="Mitsubishi">Mitsubishi</option>
+          <option value="Honda">Honda</option>
+          <option value="Subaru">Subaru</option>
+        </select>
+      </div>
+     
+    
+      
+      <div class="m-3">
+        <upload-image [imageId]="carId"></upload-image>
+      </div>
+    </form>
+  </div>
+
+  <div id="id3" class="container-xxl">
+    <cars-cards [filterId]="carId"></cars-cards>
+  </div>
+</div>
