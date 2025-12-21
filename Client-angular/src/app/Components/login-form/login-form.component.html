@@ -1,0 +1,46 @@
+<div class="container-xxl mt-5" data-bs-theme="orange">
+  <div *ngIf="!LoggedIn" class="mymax-w">
+    <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+     
+        <h1 class="center mycolor">Login</h1>
+        <div *ngIf="invalidLogin" class="alert alert-danger">
+          Invalid name or password
+        </div>
+        <br />
+        <div>
+          <label for="name" class="sr-only">Name:</label>
+          <input
+            name="name"
+            type="text"
+            id="name"
+            ngModel
+            class="form-control"
+            placeholder="Name"
+            required
+            autofocus
+          />
+        </div>
+        <div>
+          <label for="password" class="sr-only">Password:</label>
+          <input
+            name="password"
+            type="password"
+            id="password"
+            ngModel
+            class="form-control"
+            placeholder="password"
+            required
+            autofocus
+          />
+        </div>
+       <div class="mt-3">
+        <span class="">hint: read the Readme</span>
+        <button class="btn btn-dark float-end" type="submit">Login</button>
+       </div>
+     
+    </form>
+  </div>
+  <div *ngIf="LoggedIn">
+    <h1 class="center">You are logged in !</h1>
+  </div>
+</div>
