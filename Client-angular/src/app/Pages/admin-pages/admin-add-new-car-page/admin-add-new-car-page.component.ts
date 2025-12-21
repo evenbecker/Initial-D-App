@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Car } from 'src/app/Models/Car.model';
-import { CarsService } from 'src/app/Services/Cars/cars.service';
+import { Car } from '../../../Models/car';
+import { CarsService } from '../../../Services/Cars/cars.service';
+import { UploadImageComponent } from '../../../Components/upload-image/upload-image.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-admin-add-new-car-page',
   standalone: true,
-  imports: [],
+  imports: [UploadImageComponent, FormsModule, CommonModule],
   templateUrl: './admin-add-new-car-page.component.html',
   styleUrl: './admin-add-new-car-page.component.scss'
 })

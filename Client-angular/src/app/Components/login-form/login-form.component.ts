@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { User } from './../../Models/User.model';
+import { User } from '../../Models/user';
 import { UsersService } from './../../Services/Users/users.service';
 import { Router } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-login-form',
+  selector: 'login-form',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.scss'
 })

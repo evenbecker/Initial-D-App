@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Car } from '../../Models/car';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { CarsService } from '../../Services/Cars/cars.service';
+import { SafeResourceUrlPipe } from '../../Pipes/safe-resource-url.pipe';
+
 
 @Component({
-  selector: 'app-cars-cards',
+  selector: 'cars-cards',
   standalone: true,
-  imports: [],
+  imports: [RouterModule, SafeResourceUrlPipe],
   templateUrl: './cars-cards.component.html',
   styleUrl: './cars-cards.component.scss'
 })

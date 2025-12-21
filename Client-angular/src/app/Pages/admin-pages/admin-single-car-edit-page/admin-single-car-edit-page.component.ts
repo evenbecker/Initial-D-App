@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Car } from '../../../Models/car';
 import { CarsService } from '../../../Services/Cars/cars.service';
+import { CarsCardsComponent } from '../../../Components/cars-cards/cars-cards.component';
+import { UploadImageComponent } from '../../../Components/upload-image/upload-image.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-single-car-edit-page',
   standalone: true,
-  imports: [],
+  imports: [CarsCardsComponent, UploadImageComponent, FormsModule],
   templateUrl: './admin-single-car-edit-page.component.html',
   styleUrl: './admin-single-car-edit-page.component.scss'
 })

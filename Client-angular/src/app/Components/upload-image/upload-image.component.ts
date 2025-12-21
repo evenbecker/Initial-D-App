@@ -1,18 +1,20 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CarsService } from 'src/app/Services/Cars/cars.service';
-
-@Component({
-  selector: 'app-upload-image',
-  standalone: true,
-  imports: [],
-  templateUrl: './upload-image.component.html',
-  styleUrl: './upload-image.component.scss'
-})
+import { CarsService } from '../../Services/Cars/cars.service';
 import {
   HttpClient,
   HttpEventType,
   HttpErrorResponse,
 } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'upload-image',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './upload-image.component.html',
+  styleUrl: './upload-image.component.scss'
+})
+
 
 
 

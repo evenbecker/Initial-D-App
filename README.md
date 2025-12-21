@@ -4,7 +4,7 @@
 ## Tech Stack
 - ASP.Net core 6 Web Api.
 - Entity Framework Core.
-- Angular 15.
+- Angular 18.
 - Sass.
 - Bootstrap 5.
 - Microsoft SQL Server.

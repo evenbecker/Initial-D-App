@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/app/Environments/myEnvironment';
+import { environment } from '../../Environments/myEnvironment';
 import { Observable } from 'rxjs';
-import { Credentials } from 'src/app/Models/Credentials.model';
+import { Credentials } from '../../Models/credentials';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({

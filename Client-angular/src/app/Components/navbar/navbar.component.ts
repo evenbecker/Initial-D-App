@@ -1,14 +1,15 @@
 import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { CarsService } from 'src/app/Services/Cars/cars.service';
+import { CarsService } from '../../Services/Cars/cars.service';
 import { Router } from '@angular/router';
-import { UsersService } from 'src/app/Services/Users/users.service';
-
+import { UsersService } from '../../Services/Users/users.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
