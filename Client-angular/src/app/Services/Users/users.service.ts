@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../Environments/myEnvironment';
 import { Observable } from 'rxjs';
 import { Credentials } from '../../Models/credentials';
-import { JwtHelperService } from '@auth0/angular-jwt';
+import { JwtHelperService , JWT_OPTIONS} from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root'

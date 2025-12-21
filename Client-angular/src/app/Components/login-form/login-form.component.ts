@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from '../../Models/user';
 import { UsersService } from './../../Services/Users/users.service';
-import { Router } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'login-form',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.scss'
 })

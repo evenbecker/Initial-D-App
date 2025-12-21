@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light navbar-expand-lg" style="background-color: white;">
   <div class="container-fluid" data-bs-theme="orange">
  <a class="navbar-brand" routerLink="Home">
-      <img class="rounded" src="..\..\..\assets\logos\First_Stage_logoCrop.jpg" alt="Initial D" width="90">
+      <img class="rounded" src="logos\First_Stage_logoCrop.jpg" alt="Initial D" width="90">
     </a>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -24,7 +24,7 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-          <!---->
+          
             find by brand
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -44,12 +44,14 @@
           </ul>
         </li>
       </ul>
+      <!--
       <div *ngIf="LoggedIn">
         <button type="button" class="btn btn-danger" (click)="logout()">
           Logout
         </button>
       </div>
       <input [(ngModel)]="LoggedIn" type="hidden" />
+    -->
     </div>
 
     <form class="d-flex" (ngSubmit)="search()">

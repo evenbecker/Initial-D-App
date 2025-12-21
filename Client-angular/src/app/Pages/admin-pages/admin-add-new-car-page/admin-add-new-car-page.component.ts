@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Car } from '../../../Models/car';
 import { CarsService } from '../../../Services/Cars/cars.service';
 import { UploadImageComponent } from '../../../Components/upload-image/upload-image.component';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-admin-add-new-car-page',
   standalone: true,
-  imports: [UploadImageComponent, FormsModule, CommonModule],
+  imports: [UploadImageComponent, FormsModule, CommonModule, RouterModule],
   templateUrl: './admin-add-new-car-page.component.html',
   styleUrl: './admin-add-new-car-page.component.scss'
 })

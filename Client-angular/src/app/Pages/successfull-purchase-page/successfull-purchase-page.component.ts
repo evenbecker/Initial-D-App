@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router,  RouterModule} from '@angular/router';
 import { Car } from '../../Models/car';
 import { CarsService } from '../../Services/Cars/cars.service'; 
 
 @Component({
   selector: 'app-successfull-purchase-page',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './successfull-purchase-page.component.html',
   styleUrl: './successfull-purchase-page.component.scss'
 })

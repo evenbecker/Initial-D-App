@@ -1,15 +1,16 @@
 import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { CarsService } from '../../Services/Cars/cars.service';
-import { Router } from '@angular/router';
+import { Router , RouterModule} from '@angular/router';
 import { UsersService } from '../../Services/Users/users.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -24,13 +25,13 @@ export class NavbarComponent implements OnInit {
   constructor(
     private carsService: CarsService,
     private router: Router,
-    private usersService: UsersService
+  //  private usersService: UsersService
   ) {}
 
   // This Func Gets Urlpath, find matching link to router attribute, and then adds active to it
   ngOnInit(): void {
-    this.usersService.IsUserAuthenticated();
-    this.LoggedIn = this.usersService.LogStatus;
+   // this.usersService.IsUserAuthenticated();
+    //this.LoggedIn = this.usersService.LogStatus;
     this.setActiveLink();
   }
 
@@ -42,13 +43,13 @@ export class NavbarComponent implements OnInit {
       link.classList.add('active');
     }
   }
-
+/*
   logout() {
     this.usersService.LogStatus = false;
     this.usersService.LogOut();
     location.reload();
   }
-
+*/
   search() {
     this.carsService.GetCarIdUsingName(this.searchQuery.value!).subscribe({
       next: (carId) => {

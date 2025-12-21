@@ -3,12 +3,13 @@ import { Car } from '../../Models/car';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CarsService } from '../../Services/Cars/cars.service';
 import { SafeResourceUrlPipe } from '../../Pipes/safe-resource-url.pipe';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'cars-cards',
   standalone: true,
-  imports: [RouterModule, SafeResourceUrlPipe],
+  imports: [RouterModule, SafeResourceUrlPipe, CommonModule],
   templateUrl: './cars-cards.component.html',
   styleUrl: './cars-cards.component.scss'
 })

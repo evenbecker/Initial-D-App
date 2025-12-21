@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CarsTitleComponent } from '../../Components/cars-title/cars-title.component';
 
 @Component({
-  selector: 'app-main-page',
+  selector: 'main-page',
   standalone: true,
   imports: [CarsTitleComponent],
   templateUrl: './main-page.component.html',
