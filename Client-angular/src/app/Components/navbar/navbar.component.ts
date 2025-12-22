@@ -25,13 +25,13 @@ export class NavbarComponent implements OnInit {
   constructor(
     private carsService: CarsService,
     private router: Router,
-  //  private usersService: UsersService
+    private usersService: UsersService
   ) {}
 
   // This Func Gets Urlpath, find matching link to router attribute, and then adds active to it
   ngOnInit(): void {
-   // this.usersService.IsUserAuthenticated();
-    //this.LoggedIn = this.usersService.LogStatus;
+    this.usersService.IsUserAuthenticated();
+    this.LoggedIn = this.usersService.LogStatus;
     this.setActiveLink();
   }
 
@@ -43,13 +43,13 @@ export class NavbarComponent implements OnInit {
       link.classList.add('active');
     }
   }
-/*
+
   logout() {
     this.usersService.LogStatus = false;
     this.usersService.LogOut();
     location.reload();
   }
-*/
+
   search() {
     this.carsService.GetCarIdUsingName(this.searchQuery.value!).subscribe({
       next: (carId) => {

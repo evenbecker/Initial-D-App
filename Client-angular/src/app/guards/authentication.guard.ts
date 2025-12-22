@@ -7,7 +7,8 @@ export const authenticationGuard: CanActivateFn = (route, state) => {
 */
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { JwtHelperService,  JWT_OPTIONS } from '@auth0/angular-jwt';
+import { JwtHelperService  } from '@auth0/angular-jwt';
+import { tokenGetter } from '../app.config';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,7 @@ import { JwtHelperService,  JWT_OPTIONS } from '@auth0/angular-jwt';
 export class AuthenticationGuard implements CanActivate {
   constructor(private router: Router, private jwtHelper: JwtHelperService) {}
   canActivate() {
-    const token = localStorage.getItem('jwt');
+    const token = tokenGetter();
 
     if (token && !this.jwtHelper.isTokenExpired(token)) {
       return true;

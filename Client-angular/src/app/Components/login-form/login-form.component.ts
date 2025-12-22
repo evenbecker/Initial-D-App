@@ -44,7 +44,8 @@ export class LoginFormComponent {
     this.myUser.password = credentials.password;
 
     await this.usersService.PostLogin(credentials).subscribe(
-      (response) => {
+      {
+                next: (response) => {
         const token = (<any>response).token;
         localStorage.setItem('jwt', token);
         this.invalidLogin = false;
@@ -53,9 +54,9 @@ export class LoginFormComponent {
         }
         location.reload();
       },
-      (err) => {
+      error: (err: any) => {
         this.invalidLogin = true;
       }
-    );
+    });
   }
 }

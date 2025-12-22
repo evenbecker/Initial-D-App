@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../Environments/myEnvironment';
 import { Observable } from 'rxjs';
 import { Credentials } from '../../Models/credentials';
-import { JwtHelperService , JWT_OPTIONS} from '@auth0/angular-jwt';
+import { JwtHelperService  } from '@auth0/angular-jwt';
+import { tokenGetter } from '../../app.config';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +14,7 @@ export class UsersService {
 
   constructor(private http: HttpClient,private jwtHelper: JwtHelperService) { }
 
-  get token(): any {
-    return localStorage.getItem('jwt');
-  }
+
   PostLogin(credentials: Credentials): Observable<Credentials> {
     return this.http.post<Credentials>(environment.ServerUrl+"/api/User/Login", credentials, { responseType: 'json' });
   }
@@ -26,7 +25,7 @@ export class UsersService {
   }
 
   IsUserAuthenticated() {
-    const token = localStorage.getItem('jwt');
+    const token = tokenGetter();
 
     if (token && !this.jwtHelper.isTokenExpired(token)) {
       this.LogStatus=true
