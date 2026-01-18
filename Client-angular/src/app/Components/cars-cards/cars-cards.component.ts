@@ -5,18 +5,15 @@ import { CarsService } from '../../Services/Cars/cars.service';
 import { SafeResourceUrlPipe } from '../../Pipes/safe-resource-url.pipe';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'cars-cards',
   standalone: true,
   imports: [RouterModule, SafeResourceUrlPipe, CommonModule],
   templateUrl: './cars-cards.component.html',
-  styleUrl: './cars-cards.component.scss'
+  styleUrl: './cars-cards.component.scss',
 })
-
-
 export class CarsCardsComponent implements OnInit {
-  @Input() userAgent: string = 'Visitor'; // i dont need this 99% sure lol
+  @Input() userAgent: string = 'Visitor';
 
   cars: Car[] = [];
   filteredCars: Car[] = [];

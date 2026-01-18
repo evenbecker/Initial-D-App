@@ -1,5 +1,8 @@
-<div class="container-xxl mt-5 px-5"  data-bs-theme="orange">
-  <div class="row row-cols-1 row-cols-md-2 g-4" *ngIf="filteredCars.length > 0">
+<div class="container-xxl mt-5 px-5" data-bs-theme="orange">
+  <div
+    class="row row-cols-1 row-cols-md-2 g-4"
+    *ngIf="filteredCars.length > 0 && userAgent == 'Visitor'"
+  >
     <h1 class="center m-5 mycolor">Brand: {{ filterValue }}</h1>
   </div>
   <div class="row row-cols-1 row-cols-md-2 g-4" *ngIf="filteredCars.length < 1">
@@ -15,34 +18,33 @@
             alt="No Image"
           />
         </a>
-        <div class="card-body">                    
+        <div class="card-body">
           <span class="span-text">{{ car.name }}</span>
-                  <button
-          *ngIf="userAgent == 'Visitor' && filterId == 0"
-          routerLink="/Cars/id/{{ car.id }}"
-          type="button"
-          class="btn btn-dark float-end"
-        >
-          Enlarge
-        </button>
-        <button
-          *ngIf="userAgent == 'Admin' && filterId == 0"
-          type="button"
-          class="btn btn-danger"
-          (click)="DeleteCar(car.id)"
-        >
-          Delete
-        </button>
-        <button
-          *ngIf="userAgent == 'Admin' && filterId == 0"
-          routerLink="/Admin/Edit/{{ car.id }}"
-          type="button"
-          class="btn btn-success"
-        >
-          Edit
-        </button>
+          <button
+            *ngIf="userAgent == 'Visitor' && filterId == 0"
+            routerLink="/Cars/id/{{ car.id }}"
+            type="button"
+            class="btn btn-dark float-end"
+          >
+            Enlarge
+          </button>
+          <button
+            *ngIf="userAgent == 'Admin' && filterId == 0"
+            type="button"
+            class="btn btn-danger float-end"
+            (click)="DeleteCar(car.id)"
+          >
+            Delete
+          </button>
+          <button
+            *ngIf="userAgent == 'Admin' && filterId == 0"
+            routerLink="/Admin/Edit/{{ car.id }}"
+            type="button"
+            class="btn btn-dark float-end mx-3"
+          >
+            Edit
+          </button>
         </div>
-
       </div>
     </div>
   </div>

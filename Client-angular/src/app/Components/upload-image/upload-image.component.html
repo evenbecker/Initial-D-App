@@ -1,5 +1,5 @@
 <div class="mt-5">
-  <div class="container-fluid">
+  <div class="container-fluid" data-bs-theme="orange">
     <input
       type="file"
       #file
@@ -7,8 +7,8 @@
       (change)="uploadFile(file.files, imageId)"
       style="display: none"
     />
-    <button type="button" class="btn btn-success" (click)="file.click()">
-      Image
+    <button type="button" class="btn btn-dark" (click)="file.click()">
+      Upload an image
     </button>
   </div>
   <div class="col-md-4">
