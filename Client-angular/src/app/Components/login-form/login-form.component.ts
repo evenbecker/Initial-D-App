@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './login-form.component.html',
-  styleUrl: './login-form.component.scss'
+  styleUrl: './login-form.component.scss',
 })
 export class LoginFormComponent {
   invalidLogin: boolean = false;
@@ -20,7 +20,6 @@ export class LoginFormComponent {
     name: '',
     id: 0,
     password: '',
-    lastLogin: '',
   };
 
   // For Local Creds Saving
@@ -43,9 +42,8 @@ export class LoginFormComponent {
     this.myUser.name = credentials.name;
     this.myUser.password = credentials.password;
 
-    await this.usersService.PostLogin(credentials).subscribe(
-      {
-                next: (response) => {
+    await this.usersService.PostLogin(credentials).subscribe({
+      next: (response) => {
         const token = (<any>response).token;
         localStorage.setItem('jwt', token);
         this.invalidLogin = false;
@@ -56,7 +54,7 @@ export class LoginFormComponent {
       },
       error: (err: any) => {
         this.invalidLogin = true;
-      }
+      },
     });
   }
 }

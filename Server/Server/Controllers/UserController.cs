@@ -40,7 +40,7 @@ namespace Server.Controllers
                     throw new UnauthorizedUserException();
                 }
                 // updating login to now
-                user.LastLogin = DateTime.Now;
+              
                 await mydbcontext.SaveChangesAsync();
 
                 ConfiguredValues configuredValues = new ConfiguredValues(_configuration);

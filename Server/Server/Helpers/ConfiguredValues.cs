@@ -29,7 +29,7 @@ namespace Server.Helpers
 
         public string GetSecretKey()
         {
-            return "123BossMy123";
+            return "shuuuuuuuuuuuuuuuuut uuuuuuuuuuuuuuuuuuup";
         }
 
         public string GetClient()

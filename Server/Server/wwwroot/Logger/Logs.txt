@@ -22,3 +22,7 @@ Time: 16/12/2025 11:56:19,  Description: Car with parameters: Id: 0, Name: honda
 
 Time: 17/12/2025 16:22:08,  Description: Unknown Error,   Exception Message: IDX10653: The encryption algorithm 'HS256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '96'. (Parameter 'key').
 
+Time: 18/01/2026 17:15:08,  Description: Unknown Error,   Exception Message: Invalid column name 'LastLogin'..
+
+Time: 18/01/2026 17:53:11,  Description: Unknown Error,   Exception Message: IDX10653: The encryption algorithm 'HS256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '96'. (Parameter 'key').
+

@@ -2,7 +2,7 @@ CREATE TABLE Users
 (Id int IDENTITY    PRIMARY KEY NOT NULL,  
 Name nvarchar(max) NOT NULL,  
 Password nvarchar(max) NOT NULL,
-LastLogin datetime2 NOT NULL
+LastLogin datetime NOT NULL
 );
 
 INSERT INTO Users (Name, Password, LastLogin)
