@@ -1,6 +1,11 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
-.mymax-w{
-    max-width: 300px;
-    margin: 0 auto;
+.mymax-w {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.logged-max-w {
+  max-width: 390px;
+  margin: 0 auto;
 }
